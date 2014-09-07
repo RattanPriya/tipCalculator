@@ -19,6 +19,10 @@
 		319FDE8919BCFAF70005FD77 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 319FDE7119BCFAF70005FD77 /* UIKit.framework */; };
 		319FDE9119BCFAF70005FD77 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 319FDE8F19BCFAF70005FD77 /* InfoPlist.strings */; };
 		319FDE9319BCFAF70005FD77 /* tipcal1Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 319FDE9219BCFAF70005FD77 /* tipcal1Tests.m */; };
+		319FDE9F19BCFD5E0005FD77 /* TipViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 319FDE9D19BCFD5E0005FD77 /* TipViewController.m */; };
+		319FDEA019BCFD5E0005FD77 /* TipViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 319FDE9E19BCFD5E0005FD77 /* TipViewController.xib */; };
+		319FDEA419BD14B00005FD77 /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 319FDEA219BD14B00005FD77 /* SettingsViewController.m */; };
+		319FDEA519BD14B00005FD77 /* SettingsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 319FDEA319BD14B00005FD77 /* SettingsViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +52,12 @@
 		319FDE8E19BCFAF70005FD77 /* tipcal1Tests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "tipcal1Tests-Info.plist"; sourceTree = "<group>"; };
 		319FDE9019BCFAF70005FD77 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		319FDE9219BCFAF70005FD77 /* tipcal1Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = tipcal1Tests.m; sourceTree = "<group>"; };
+		319FDE9C19BCFD5E0005FD77 /* TipViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TipViewController.h; sourceTree = "<group>"; };
+		319FDE9D19BCFD5E0005FD77 /* TipViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TipViewController.m; sourceTree = "<group>"; };
+		319FDE9E19BCFD5E0005FD77 /* TipViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TipViewController.xib; sourceTree = "<group>"; };
+		319FDEA119BD14B00005FD77 /* SettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsViewController.h; sourceTree = "<group>"; };
+		319FDEA219BD14B00005FD77 /* SettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsViewController.m; sourceTree = "<group>"; };
+		319FDEA319BD14B00005FD77 /* SettingsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SettingsViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,6 +121,12 @@
 				319FDE7D19BCFAF70005FD77 /* AppDelegate.m */,
 				319FDE7F19BCFAF70005FD77 /* Images.xcassets */,
 				319FDE7419BCFAF70005FD77 /* Supporting Files */,
+				319FDE9C19BCFD5E0005FD77 /* TipViewController.h */,
+				319FDE9D19BCFD5E0005FD77 /* TipViewController.m */,
+				319FDE9E19BCFD5E0005FD77 /* TipViewController.xib */,
+				319FDEA119BD14B00005FD77 /* SettingsViewController.h */,
+				319FDEA219BD14B00005FD77 /* SettingsViewController.m */,
+				319FDEA319BD14B00005FD77 /* SettingsViewController.xib */,
 			);
 			path = tipcal1;
 			sourceTree = "<group>";
@@ -219,8 +235,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				319FDEA019BCFD5E0005FD77 /* TipViewController.xib in Resources */,
 				319FDE7819BCFAF70005FD77 /* InfoPlist.strings in Resources */,
 				319FDE8019BCFAF70005FD77 /* Images.xcassets in Resources */,
+				319FDEA519BD14B00005FD77 /* SettingsViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -240,7 +258,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				319FDE7E19BCFAF70005FD77 /* AppDelegate.m in Sources */,
+				319FDE9F19BCFD5E0005FD77 /* TipViewController.m in Sources */,
 				319FDE7A19BCFAF70005FD77 /* main.m in Sources */,
+				319FDEA419BD14B00005FD77 /* SettingsViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -441,6 +461,7 @@
 				319FDE9819BCFAF70005FD77 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		319FDE9919BCFAF70005FD77 /* Build configuration list for PBXNativeTarget "tipcal1Tests" */ = {
 			isa = XCConfigurationList;
@@ -449,6 +470,7 @@
 				319FDE9B19BCFAF70005FD77 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
