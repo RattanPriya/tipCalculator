@@ -30,13 +30,6 @@
     
     // Do any additional setup after loading the view from its nib.
 }
-- (IBAction)updateDefaultValues:(UIStepper *)sender {
-    double value = [sender value];
-    
-    [label setText:[NSString stringWithFormat:@"%d", (int)value]];
-}
-
-
 - (IBAction)onTapSettings:(id)sender {
     [self.view endEditing:YES];
 }
@@ -46,28 +39,36 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
--(IBAction)Save {
-    NSLog(@"Entering save method");
-    NSString *saveTipPercent = self.tipDefault.text;
+
+- (IBAction)stepperAction:(id)sender {
     
-    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
-    [defaults setObject:saveTipPercent forKey:@"saveTipPercent"];
-    [defaults synchronize];
+        tipDefault.text = [NSString stringWithFormat:@"%0.0f", stepperDefaultTip.value];
 }
--(IBAction)Load{
-        NSLog(@"Entering load method");
+
+- (void)viewWillAppear:(BOOL)animated {
+    NSLog(@"view will appear >>>SETTINGS");
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
     NSString *loadStrings = [defaults objectForKey:@"saveTipPercent"];
     NSLog(@"loadStrings>>%@",loadStrings);
     [label setText:loadStrings];
-}
--(IBAction)Change{
-        NSLog(@"Entering Change method");
-    label.text = @"2";
+    stepperDefaultTip.value = [tipDefault.text integerValue];
+    
 }
 
+- (void)viewDidAppear:(BOOL)animated {
+    NSLog(@"view did appear >>>SETTINGS");
+}
 
-- (IBAction)stepperAction:(id)sender {
-        tipDefault.text = [NSString stringWithFormat:@"%f %", stepperDefaultTip.value];
+- (void)viewWillDisappear:(BOOL)animated {
+    NSLog(@"view will disappear >>>SETTINGS");
+    NSString *saveTipPercent = self.tipDefault.text;
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    [defaults setObject:saveTipPercent forKey:@"saveTipPercent"];
+    [defaults synchronize];
+    
+}
+
+- (void)viewDidDisappear:(BOOL)animated {
+    NSLog(@"view did disappear >>>SETTINGS");
 }
 @end
