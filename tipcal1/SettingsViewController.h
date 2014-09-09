@@ -9,5 +9,16 @@
 #import <UIKit/UIKit.h>
 
 @interface SettingsViewController : UIViewController
+{
+    IBOutlet UILabel *label;
+}
+-(IBAction)Save;
+-(IBAction)Load;
+-(IBAction)Change;
+@property (weak, nonatomic) IBOutlet UILabel *tipDefault;
+
+@property (weak, nonatomic) IBOutlet UIStepper *stepperDefaultTip;
+
+- (IBAction)stepperAction:(id)sender;
 
 @end

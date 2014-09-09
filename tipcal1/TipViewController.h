@@ -15,4 +15,5 @@
 @property (weak, nonatomic) IBOutlet UISegmentedControl *tipController;
 - (IBAction)onTap:(id)sender;
 
+
 @end
