@@ -7,12 +7,14 @@
 //
 
 #import "TipViewController.h"
+#import "SettingsViewController.h"
 
 @interface TipViewController ()
 
 @end
 
 @implementation TipViewController
+@synthesize billAmountTextField;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -29,6 +31,7 @@
     [super viewDidLoad];
     [self updateValues];
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Settings" style:UIBarButtonItemStylePlain target:self action:@selector(onSettingsButton)];
+
 
     // Do any additional setup after loading the view from its nib.
 }
@@ -55,6 +58,32 @@
     
 }
 -(void) onSettingsButton{
+    [self.navigationController pushViewController:[[SettingsViewController alloc] init] animated:YES];
+}
 
+- (void)viewWillAppear:(BOOL)animated {
+    NSLog(@"view will appear");
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    NSString *defaultTip = [defaults objectForKey:@"saveTipPercent"];
+    int tipInteger = [defaults integerForKey:@"saveTipPercent"];
+    NSLog(@"tip>>>%d",tipInteger);
+    
+    ///When app is launched, set focus on textField
+    //and show keyboard by default.
+    [billAmountTextField becomeFirstResponder];
+    [super viewWillAppear:animated];
+
+}
+
+- (void)viewDidAppear:(BOOL)animated {
+    NSLog(@"view did appear");
+}
+
+- (void)viewWillDisappear:(BOOL)animated {
+    NSLog(@"view will disappear");
+}
+
+- (void)viewDidDisappear:(BOOL)animated {
+    NSLog(@"view did disappear");
 }
 @end
