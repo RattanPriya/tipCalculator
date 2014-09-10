@@ -61,9 +61,9 @@
     NSString *loadStrings =  [defaults objectForKey:@"saveTipPercent"];
     NSString *loadStrings2 = [defaults objectForKey:@"saveTipPercent2"];
     NSString *loadStrings3 = [defaults objectForKey:@"saveTipPercent3"];
-    NSLog(@"loadStrings1>>%@",loadStrings);
-    NSLog(@"loadStrings2>>%@",loadStrings2);
-    NSLog(@"loadStrings3>>%@",loadStrings3);
+    //NSLog(@"loadStrings1>>%@",loadStrings);
+    //NSLog(@"loadStrings2>>%@",loadStrings2);
+    //NSLog(@"loadStrings3>>%@",loadStrings3);
     [label setText:loadStrings];
     [label2 setText:loadStrings2];
     [label3 setText:loadStrings3];
@@ -74,7 +74,7 @@
 }
 
 - (void)viewWillDisappear:(BOOL)animated {
-    NSLog(@"view will disappear >>>SETTINGS");
+   // NSLog(@"view will disappear >>>SETTINGS");
     NSString *saveTipPercent = self.tipDefault.text;
     NSString *saveTipPercent2 = self.tipDefault2.text;
     NSString *saveTipPercent3 = self.tipDefault3.text;
@@ -83,9 +83,9 @@
     [defaults setObject:saveTipPercent forKey:@"saveTipPercent"];
     [defaults setObject:saveTipPercent2 forKey:@"saveTipPercent2"];
     [defaults setObject:saveTipPercent3 forKey:@"saveTipPercent3"];
-    NSLog(@"S1--DISAPPEAR>>%@",saveTipPercent);
-    NSLog(@"s2--DISAPPEAR>>%@",saveTipPercent2);
-    NSLog(@"s3--DISAPPEAR>>%@",saveTipPercent3);
+//    NSLog(@"S1--DISAPPEAR>>%@",saveTipPercent);
+ //   NSLog(@"s2--DISAPPEAR>>%@",saveTipPercent2);
+  //  NSLog(@"s3--DISAPPEAR>>%@",saveTipPercent3);
     [defaults synchronize];
     
 }

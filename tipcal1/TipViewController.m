@@ -50,22 +50,35 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-
-- (IBAction)onTap:  (id)sender {
+-(NSMutableArray *)getDefaultTips{
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
     NSString *defaultTip = [defaults objectForKey:@"saveTipPercent"];
     NSString *defaultTip2 = [defaults objectForKey:@"saveTipPercent2"];
     NSString *defaultTip3 = [defaults objectForKey:@"saveTipPercent3"];
-    float tipInteger =  [defaultTip floatValue]/100;
-    float tipInteger2 = [defaultTip2 floatValue]/100;
-    float tipInteger3 = [defaultTip3 floatValue]/100;
+    float tip =  [defaultTip floatValue]/100;
+    float tip2 = [defaultTip2 floatValue]/100;
+    float tip3 = [defaultTip3 floatValue]/100;
+    NSMutableArray *tipValues = [[NSMutableArray alloc]init];
+    
+    [tipValues addObject: [NSNumber numberWithFloat: tip]];
+    [tipValues addObject: [NSNumber numberWithFloat: tip2]];
+    [tipValues addObject: [NSNumber numberWithFloat: tip3]];
+    [self.tipController setTitle:defaultTip forSegmentAtIndex:0];
+    [self.tipController setTitle:defaultTip2 forSegmentAtIndex:1];
+    [self.tipController setTitle:defaultTip3 forSegmentAtIndex:2];
+    return tipValues;
+}
+- (IBAction)onTap:  (id)sender {
+   
     [self.view endEditing:YES];
-     NSMutableArray *tipValues = [[NSMutableArray alloc]init];
-  
-    [tipValues addObject: [NSNumber numberWithFloat: tipInteger]];
-    [tipValues addObject: [NSNumber numberWithFloat: tipInteger2]];
-    [tipValues addObject: [NSNumber numberWithFloat: tipInteger3]];
+    NSMutableArray *tipValues = [self getDefaultTips];
     [self updateValues: tipValues];
+}
+
+- (IBAction)billAmountValueChanged:(id)sender {
+    NSLog(@">>>>>>>%@",self.billAmountTextField.text);
+    NSMutableArray * tipValues = [self getDefaultTips];
+    [self updateValues:tipValues];
 }
 
 -(void)updateValues:(NSMutableArray *)tipValues {
@@ -82,16 +95,7 @@
 }
 
 - (void)viewWillAppear:(BOOL)animated {
-    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
-    NSString *defaultTip = [defaults objectForKey:@"saveTipPercent"];
-    NSString *defaultTip2 = [defaults objectForKey:@"saveTipPercent2"];
-    NSString *defaultTip3 = [defaults objectForKey:@"saveTipPercent3"];
-    [self.tipController setTitle:defaultTip forSegmentAtIndex:0];
-    [self.tipController setTitle:defaultTip2 forSegmentAtIndex:1];
-    [self.tipController setTitle:defaultTip3 forSegmentAtIndex:2];
- 
-    
-    
+    [self getDefaultTips];
     ///When app is launched, set focus on textField
     //and show keyboard by default.
     [billAmountTextField becomeFirstResponder];
@@ -100,14 +104,14 @@
 }
 
 - (void)viewDidAppear:(BOOL)animated {
-    NSLog(@"view did appear");
+    //NSLog(@"view did appear");
 }
 
 - (void)viewWillDisappear:(BOOL)animated {
-    NSLog(@"view will disappear");
+    //NSLog(@"view will disappear");
 }
 
 - (void)viewDidDisappear:(BOOL)animated {
-    NSLog(@"view did disappear");
+    //NSLog(@"view did disappear");
 }
 @end
