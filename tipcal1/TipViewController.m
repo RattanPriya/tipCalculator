@@ -29,7 +29,16 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    [self updateValues];
+    NSMutableArray *tipValues = [[NSMutableArray alloc] init];
+    NSNumber *tip1 = [NSNumber numberWithFloat:0.10];
+    NSNumber *tip2 = [NSNumber numberWithFloat:0.15];
+    NSNumber *tip3 = [NSNumber numberWithFloat:0.20];
+    [tipValues addObject:tip1];
+    [tipValues addObject:tip2];
+    [tipValues addObject:tip3];
+    
+
+    [self updateValues:tipValues];
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Settings" style:UIBarButtonItemStylePlain target:self action:@selector(onSettingsButton)];
 
 
@@ -42,18 +51,29 @@
     // Dispose of any resources that can be recreated.
 }
 
-- (IBAction)onTap:(id)sender {
+- (IBAction)onTap:  (id)sender {
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    NSString *defaultTip = [defaults objectForKey:@"saveTipPercent"];
+    NSString *defaultTip2 = [defaults objectForKey:@"saveTipPercent2"];
+    NSString *defaultTip3 = [defaults objectForKey:@"saveTipPercent3"];
+    float tipInteger =  [defaultTip floatValue]/100;
+    float tipInteger2 = [defaultTip2 floatValue]/100;
+    float tipInteger3 = [defaultTip3 floatValue]/100;
     [self.view endEditing:YES];
-    [self updateValues];
+     NSMutableArray *tipValues = [[NSMutableArray alloc]init];
+  
+    [tipValues addObject: [NSNumber numberWithFloat: tipInteger]];
+    [tipValues addObject: [NSNumber numberWithFloat: tipInteger2]];
+    [tipValues addObject: [NSNumber numberWithFloat: tipInteger3]];
+    [self updateValues: tipValues];
 }
 
--(void)updateValues {
+-(void)updateValues:(NSMutableArray *)tipValues {
     float bill = [ self.billAmountTextField.text floatValue];
-    NSArray *tipValues = @[@(0.1),@(0.15),@(0.20)];
+    [self.tipController titleForSegmentAtIndex:self.tipController.selectedSegmentIndex];
     float tipAmount = bill * [tipValues[self.tipController.selectedSegmentIndex]floatValue];
     float total = tipAmount + bill ;
     self.tipAmountLabelField.text = [NSString stringWithFormat:@"%0.2f",tipAmount];
-    
     self.totalAmountLabelField.text = [NSString stringWithFormat:@"$ %0.2f",total];
     
 }
@@ -62,11 +82,15 @@
 }
 
 - (void)viewWillAppear:(BOOL)animated {
-    NSLog(@"view will appear");
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
     NSString *defaultTip = [defaults objectForKey:@"saveTipPercent"];
-    int tipInteger = [defaults integerForKey:@"saveTipPercent"];
-    NSLog(@"tip>>>%d",tipInteger);
+    NSString *defaultTip2 = [defaults objectForKey:@"saveTipPercent2"];
+    NSString *defaultTip3 = [defaults objectForKey:@"saveTipPercent3"];
+    [self.tipController setTitle:defaultTip forSegmentAtIndex:0];
+    [self.tipController setTitle:defaultTip2 forSegmentAtIndex:1];
+    [self.tipController setTitle:defaultTip3 forSegmentAtIndex:2];
+ 
+    
     
     ///When app is launched, set focus on textField
     //and show keyboard by default.

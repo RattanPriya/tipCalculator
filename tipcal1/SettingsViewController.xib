@@ -7,8 +7,14 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SettingsViewController">
             <connections>
                 <outlet property="label" destination="uMO-RE-duM" id="by5-ZG-yWk"/>
+                <outlet property="label2" destination="c5q-Vw-goN" id="wKV-g4-d99"/>
+                <outlet property="label3" destination="YGC-AU-Qlb" id="3n5-yk-MDG"/>
                 <outlet property="stepperDefaultTip" destination="epO-iP-amK" id="sLd-MF-DAh"/>
+                <outlet property="stepperDefaultTip2" destination="Q9i-lL-eTE" id="ZzF-kj-EV2"/>
+                <outlet property="stepperDefaultTip3" destination="9TO-vN-aLU" id="BrE-6h-bl6"/>
                 <outlet property="tipDefault" destination="uMO-RE-duM" id="X7r-ac-kZL"/>
+                <outlet property="tipDefault2" destination="c5q-Vw-goN" id="x0G-w8-BrM"/>
+                <outlet property="tipDefault3" destination="YGC-AU-Qlb" id="ZPm-Sf-7ZL"/>
                 <outlet property="view" destination="1" id="3"/>
             </connections>
         </placeholder>
@@ -29,8 +35,32 @@
                     <fontDescription key="fontDescription" type="system" pointSize="70"/>
                     <nil key="highlightedColor"/>
                 </label>
+                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="15" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c5q-Vw-goN">
+                    <rect key="frame" x="-23" y="165" width="133" height="84"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="70"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="20" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YGC-AU-Qlb">
+                    <rect key="frame" x="-15" y="261" width="133" height="84"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="70"/>
+                    <nil key="highlightedColor"/>
+                </label>
                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="%" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3GF-Ra-a9s">
                     <rect key="frame" x="76" y="73" width="133" height="84"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="70"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="%" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rVe-OM-P0O">
+                    <rect key="frame" x="70" y="162" width="133" height="84"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="70"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="%" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9cY-mI-BsK">
+                    <rect key="frame" x="70" y="261" width="133" height="84"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <fontDescription key="fontDescription" type="system" pointSize="70"/>
                     <nil key="highlightedColor"/>
@@ -40,6 +70,20 @@
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                     <connections>
                         <action selector="stepperAction:" destination="-1" eventType="valueChanged" id="LBs-n8-aaN"/>
+                    </connections>
+                </stepper>
+                <stepper opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="15" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="Q9i-lL-eTE">
+                    <rect key="frame" x="211" y="197" width="94" height="29"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                    <connections>
+                        <action selector="stepperAction2:" destination="-1" eventType="valueChanged" id="Uty-y9-9PV"/>
+                    </connections>
+                </stepper>
+                <stepper opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="20" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="9TO-vN-aLU">
+                    <rect key="frame" x="211" y="288" width="94" height="29"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                    <connections>
+                        <action selector="stepperAction3:" destination="-1" eventType="valueChanged" id="nBX-tT-nLf"/>
                     </connections>
                 </stepper>
             </subviews>
