@@ -11,13 +11,19 @@
 @interface SettingsViewController : UIViewController
 {
     IBOutlet UILabel *label;
+    IBOutlet UILabel *label2;
+    IBOutlet UILabel *label3;
 }
--(IBAction)Save;
--(IBAction)Load;
--(IBAction)Change;
+
 @property (weak, nonatomic) IBOutlet UILabel *tipDefault;
+@property (weak, nonatomic) IBOutlet UILabel *tipDefault2;
+@property (weak, nonatomic) IBOutlet UILabel *tipDefault3;
 
 @property (weak, nonatomic) IBOutlet UIStepper *stepperDefaultTip;
+@property (weak, nonatomic) IBOutlet UIStepper *stepperDefaultTip2;
+@property (weak, nonatomic) IBOutlet UIStepper *stepperDefaultTip3;
+- (IBAction)stepperAction2:(id)sender;
+- (IBAction)stepperAction3:(id)sender;
 
 - (IBAction)stepperAction:(id)sender;
 
