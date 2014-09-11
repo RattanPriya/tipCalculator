@@ -12,7 +12,7 @@ git clone https://github.com/RattanPriya/tipCalculator.git
 This will open Xcode with the tipCal1.xcodeproj in files view.
 3. Click on play button on the top left to run the app. You will see that iphone simulator runs with the app.
 
-![alt tag](https://github.com/RattanPriya/tipCalculator/blob/master/tipCal2.gif)
+![alt tag](https://github.com/RattanPriya/tipCalculator/blob/master/tipCalHomeworkSubmission.gif)
 
 
   
