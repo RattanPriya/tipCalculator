@@ -86,7 +86,7 @@
     [self.tipController titleForSegmentAtIndex:self.tipController.selectedSegmentIndex];
     float tipAmount = bill * [tipValues[self.tipController.selectedSegmentIndex]floatValue];
     float total = tipAmount + bill ;
-    self.tipAmountLabelField.text = [NSString stringWithFormat:@"%0.2f",tipAmount];
+    self.tipAmountLabelField.text = [NSString stringWithFormat:@"$ %0.2f",tipAmount];
     self.totalAmountLabelField.text = [NSString stringWithFormat:@"$ %0.2f",total];
     
 }
