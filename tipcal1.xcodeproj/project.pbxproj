@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		31202F7F19C1588900E6B0AD /* tipCal2.gif in Resources */ = {isa = PBXBuildFile; fileRef = 31202F7E19C1588900E6B0AD /* tipCal2.gif */; };
+		31202F8119C15B0700E6B0AD /* tipCalHomeworkSubmission.gif in Resources */ = {isa = PBXBuildFile; fileRef = 31202F8019C15B0700E6B0AD /* tipCalHomeworkSubmission.gif */; };
 		319FDE6E19BCFAF70005FD77 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 319FDE6D19BCFAF70005FD77 /* Foundation.framework */; };
 		319FDE7019BCFAF70005FD77 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 319FDE6F19BCFAF70005FD77 /* CoreGraphics.framework */; };
 		319FDE7219BCFAF70005FD77 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 319FDE7119BCFAF70005FD77 /* UIKit.framework */; };
@@ -38,6 +39,7 @@
 
 /* Begin PBXFileReference section */
 		31202F7E19C1588900E6B0AD /* tipCal2.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = tipCal2.gif; sourceTree = "<group>"; };
+		31202F8019C15B0700E6B0AD /* tipCalHomeworkSubmission.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = tipCalHomeworkSubmission.gif; sourceTree = "<group>"; };
 		319FDE6A19BCFAF70005FD77 /* tipcal1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = tipcal1.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		319FDE6D19BCFAF70005FD77 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		319FDE6F19BCFAF70005FD77 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -94,6 +96,7 @@
 				319FDE6C19BCFAF70005FD77 /* Frameworks */,
 				319FDE6B19BCFAF70005FD77 /* Products */,
 				31202F7E19C1588900E6B0AD /* tipCal2.gif */,
+				31202F8019C15B0700E6B0AD /* tipCalHomeworkSubmission.gif */,
 			);
 			sourceTree = "<group>";
 		};
@@ -241,6 +244,7 @@
 				319FDEA019BCFD5E0005FD77 /* TipViewController.xib in Resources */,
 				319FDE7819BCFAF70005FD77 /* InfoPlist.strings in Resources */,
 				319FDE8019BCFAF70005FD77 /* Images.xcassets in Resources */,
+				31202F8119C15B0700E6B0AD /* tipCalHomeworkSubmission.gif in Resources */,
 				31202F7F19C1588900E6B0AD /* tipCal2.gif in Resources */,
 				319FDEA519BD14B00005FD77 /* SettingsViewController.xib in Resources */,
 			);
